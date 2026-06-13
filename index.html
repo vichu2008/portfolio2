@@ -12,13 +12,14 @@
 content="Official Portfolio of Vishnupriyan M - Aspiring Computer Science Engineer and Automobile Enthusiast">
 
 <meta name="keywords"
-content="Vishnupriyan M, Portfolio, Computer Science Engineer, Python Programmer, Web Developer">
+content="Vishnupriyan M, Portfolio, Computer Science Engineer, Python Programmer, Technology Explorer">
 
 <meta name="author"
 content="Vishnupriyan M">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="icon" type="image/jpeg" href="profile.jpg">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect"
 href="https://fonts.gstatic.com"
 crossorigin>
@@ -37,10 +38,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 --secondary:#0ea5e9;
 --dark:#07111f;
 --card:rgba(255,255,255,.08);
---glass:rgba(255,255,255,.10);
---border:rgba(255,255,255,.15);
 --text:#e2e8f0;
---light:#ffffff;
+--white:#ffffff;
 
 }
 
@@ -60,7 +59,7 @@ overflow-x:hidden;
 
 }
 
-/* Scroll Bar */
+/* Scrollbar */
 
 ::-webkit-scrollbar{
 width:8px;
@@ -80,12 +79,14 @@ top:0;
 left:0;
 height:4px;
 width:0%;
+
 background:#38bdf8;
+
 z-index:99999;
 
 }
 
-/* Nature Background */
+/* Background */
 
 body::before{
 
@@ -94,13 +95,15 @@ content:"";
 position:fixed;
 top:0;
 left:0;
+
 width:100%;
 height:100%;
 
 background:
+
 linear-gradient(
-rgba(7,17,31,.80),
-rgba(7,17,31,.88)
+rgba(7,17,31,.82),
+rgba(7,17,31,.90)
 ),
 
 url("https://images.unsplash.com/photo-1506744038136-46273834b3fb");
@@ -112,28 +115,6 @@ z-index:-2;
 
 }
 
-/* Floating Clouds */
-
-.cloud{
-
-position:absolute;
-opacity:.12;
-animation:floatCloud 40s linear infinite;
-
-}
-
-@keyframes floatCloud{
-
-0%{
-transform:translateX(-200px);
-}
-
-100%{
-transform:translateX(120vw);
-}
-
-}
-
 /* Navbar */
 
 nav{
@@ -141,11 +122,12 @@ nav{
 position:fixed;
 top:0;
 width:100%;
+
 z-index:9999;
 
-backdrop-filter:blur(15px);
-
 background:rgba(0,0,0,.25);
+
+backdrop-filter:blur(15px);
 
 border-bottom:1px solid rgba(255,255,255,.08);
 
@@ -163,8 +145,9 @@ padding:18px 8%;
 
 .logo{
 
-font-size:1.6rem;
+font-size:1.7rem;
 font-weight:800;
+
 color:#7dd3fc;
 
 }
@@ -180,7 +163,9 @@ gap:25px;
 
 text-decoration:none;
 color:white;
+
 font-weight:500;
+
 transition:.3s;
 
 }
@@ -196,28 +181,39 @@ color:#7dd3fc;
 .hero{
 
 min-height:100vh;
+
 display:flex;
 align-items:center;
+
 padding:120px 8% 80px;
 
 }
 
 .hero-content{
 
-display:grid;
-grid-template-columns:1.2fr .8fr;
-gap:60px;
-align-items:center;
-
 max-width:1300px;
+
 margin:auto;
 
+display:grid;
+
+grid-template-columns:1.2fr .8fr;
+
+gap:60px;
+
+align-items:center;
+
 }
+
+/* Hero Text */
 
 .hero-text h1{
 
 font-size:4rem;
+
 line-height:1.1;
+
+margin-bottom:15px;
 
 }
 
@@ -230,46 +226,61 @@ color:#7dd3fc;
 .hero-text h3{
 
 font-size:1.4rem;
-font-weight:500;
 
-margin:20px 0;
+font-weight:500;
 
 color:#bae6fd;
 
-min-height:40px;
+min-height:45px;
+
+margin-bottom:20px;
 
 }
 
 .tagline{
 
-font-size:1.15rem;
-font-weight:500;
-color:#ffffff;
+font-size:1.1rem;
 
-margin-bottom:15px;
+font-weight:600;
+
+margin-bottom:20px;
 
 }
 
 .quote{
 
 font-style:italic;
+
+margin:25px 0;
+
 color:#cbd5e1;
-margin-top:20px;
-margin-bottom:30px;
 
 }
 
-/* Buttons */
+.hero-text p{
+
+line-height:1.9;
+
+color:#dbeafe;
+
+}
+
+/* Resume Button */
 
 .btn{
 
 display:inline-flex;
+
 align-items:center;
+
 gap:10px;
+
+margin-top:25px;
 
 padding:15px 30px;
 
 background:#38bdf8;
+
 color:#001018;
 
 font-weight:700;
@@ -291,12 +302,14 @@ box-shadow:
 
 }
 
-/* Social */
+/* Social Icons */
 
 .socials{
 
 display:flex;
+
 gap:18px;
+
 margin-top:30px;
 
 }
@@ -307,6 +320,7 @@ width:55px;
 height:55px;
 
 display:flex;
+
 justify-content:center;
 align-items:center;
 
@@ -317,6 +331,7 @@ background:rgba(255,255,255,.08);
 backdrop-filter:blur(15px);
 
 color:white;
+
 font-size:20px;
 
 transition:.4s;
@@ -328,13 +343,14 @@ text-decoration:none;
 .socials a:hover{
 
 background:#38bdf8;
+
 color:#001018;
 
 transform:translateY(-6px);
 
 }
 
-/* Profile Photo */
+/* Profile Image */
 
 .hero-image{
 
@@ -348,9 +364,9 @@ justify-content:center;
 width:380px;
 height:380px;
 
-border-radius:50%;
-
 padding:12px;
+
+border-radius:50%;
 
 background:rgba(255,255,255,.08);
 
@@ -388,42 +404,14 @@ transform:translateY(-12px);
 
 }
 
-section{
-
-padding:100px 8%;
-
-}
-
-.container{
-
-max-width:1300px;
-margin:auto;
-
-}
-
-h2{
-
-font-size:2.4rem;
-margin-bottom:30px;
-
-color:#7dd3fc;
-
-}
-
-p{
-
-line-height:1.9;
-color:#dbeafe;
-
-}
-
-/* Responsive */
+/* Mobile */
 
 @media(max-width:900px){
 
 .hero-content{
 
 grid-template-columns:1fr;
+
 text-align:center;
 
 }
@@ -493,8 +481,7 @@ VISHNUPRIYAN M
 <div class="hero-text">
 
 <h1>
-Hi, I'm
-<br>
+Hi, I'm<br>
 <span>VISHNUPRIYAN M</span>
 </h1>
 
@@ -508,10 +495,11 @@ Driven by Curiosity, Powered by Technology
 
 Welcome to my digital portfolio.
 
-I am an aspiring Computer Science Engineer and an
-Automobile Enthusiast who enjoys learning new technologies,
-building practical projects, exploring innovative ideas,
-and continuously improving technical skills.
+I am an aspiring Computer Science Engineer,
+Automobile Enthusiast, Python Programmer,
+and Technology Explorer who enjoys building
+projects, learning new technologies and
+improving practical skills.
 
 </p>
 
@@ -522,7 +510,9 @@ and Building the Future."
 
 </div>
 
-<a href="resume.pdf" class="btn" download>
+<a href="resume.pdf"
+class="btn"
+download>
 
 <i class="fa-solid fa-download"></i>
 
@@ -578,77 +568,6 @@ alt="Vishnupriyan M">
 
 </section>
 
-<script>
-
-/* Typing Animation */
-
-const texts = [
-
-"Aspiring Computer Science Engineer",
-
-"Automobile Enthusiast",
-
-"Python Programmer",
-
-"Technology Explorer"
-
-];
-
-let count = 0;
-let index = 0;
-let currentText = "";
-let letter = "";
-
-(function type(){
-
-if(count === texts.length){
-count = 0;
-}
-
-currentText = texts[count];
-
-letter = currentText.slice(0, ++index);
-
-document.getElementById("typing").textContent = letter;
-
-if(letter.length === currentText.length){
-
-count++;
-
-index = 0;
-
-setTimeout(type, 1500);
-
-}else{
-
-setTimeout(type, 90);
-
-}
-
-})();
-
-/* Scroll Progress Bar */
-
-window.addEventListener("scroll",()=>{
-
-const winScroll =
-document.body.scrollTop ||
-document.documentElement.scrollTop;
-
-const height =
-document.documentElement.scrollHeight -
-document.documentElement.clientHeight;
-
-const scrolled =
-(winScroll / height) * 100;
-
-document.getElementById("progressBar")
-.style.width = scrolled + "%";
-
-});
-
-</script>
-
 <!-- ABOUT SECTION -->
 
 <section id="about">
@@ -664,11 +583,11 @@ document.getElementById("progressBar")
 <p>
 
 My journey is driven by curiosity, continuous learning,
-and a passion for technology.
+and a strong passion for technology.
 
-As an aspiring Computer Science Engineer and automobile enthusiast,
-I enjoy exploring how innovation can solve real-world problems
-and create meaningful impact.
+As an aspiring Computer Science Engineer and automobile
+enthusiast, I enjoy exploring innovative ideas and learning
+how technology can solve real-world problems.
 
 </p>
 
@@ -679,8 +598,9 @@ and create meaningful impact.
 I am passionate about programming, software development,
 web technologies, artificial intelligence, and automobiles.
 
-I continuously work on improving my technical knowledge and
-practical skills through projects, certifications, and self-learning.
+I continuously improve my technical knowledge through
+projects, certifications, self-learning, and practical
+experiments.
 
 </p>
 
@@ -700,6 +620,8 @@ practical skills through projects, certifications, and self-learning.
 
 <p><b>Email:</b> vishnupriyan183@gmail.com</p>
 
+<p><b>Career Goal:</b> Computer Science Engineer</p>
+
 </div>
 
 </div>
@@ -708,7 +630,7 @@ practical skills through projects, certifications, and self-learning.
 
 </section>
 
-<!-- EDUCATION -->
+<!-- EDUCATION SECTION -->
 
 <section id="education">
 
@@ -729,17 +651,11 @@ Neyveli
 
 <br>
 
-<p>
-Marks: 414 / 600
-</p>
+<p>Marks: 414 / 600</p>
 
-<p>
-Percentage: 69%
-</p>
+<p>Percentage: 69%</p>
 
-<p>
-Engineering Cut-off: 142
-</p>
+<p>Engineering Cut-Off: 142</p>
 
 </div>
 
@@ -760,7 +676,7 @@ Neyveli
 
 </section>
 
-<!-- SKILLS -->
+<!-- SKILLS SECTION -->
 
 <section id="skills">
 
@@ -770,37 +686,101 @@ Neyveli
 
 <div class="skills-grid">
 
-<div class="skill-card">Python</div>
+<div class="skill-card">
+<i class="fa-brands fa-python"></i>
+<br><br>
+Python
+</div>
 
-<div class="skill-card">C Programming</div>
+<div class="skill-card">
+<i class="fa-solid fa-code"></i>
+<br><br>
+C Programming
+</div>
 
-<div class="skill-card">C++</div>
+<div class="skill-card">
+<i class="fa-solid fa-laptop-code"></i>
+<br><br>
+C++
+</div>
 
-<div class="skill-card">HTML5</div>
+<div class="skill-card">
+<i class="fa-brands fa-html5"></i>
+<br><br>
+HTML5
+</div>
 
-<div class="skill-card">CSS3</div>
+<div class="skill-card">
+<i class="fa-brands fa-css3-alt"></i>
+<br><br>
+CSS3
+</div>
 
-<div class="skill-card">JavaScript</div>
+<div class="skill-card">
+<i class="fa-brands fa-js"></i>
+<br><br>
+JavaScript
+</div>
 
-<div class="skill-card">Git</div>
+<div class="skill-card">
+<i class="fa-brands fa-git-alt"></i>
+<br><br>
+Git
+</div>
 
-<div class="skill-card">GitHub</div>
+<div class="skill-card">
+<i class="fa-brands fa-github"></i>
+<br><br>
+GitHub
+</div>
 
-<div class="skill-card">Web Development</div>
+<div class="skill-card">
+<i class="fa-solid fa-globe"></i>
+<br><br>
+Web Development
+</div>
 
-<div class="skill-card">Problem Solving</div>
+<div class="skill-card">
+<i class="fa-solid fa-brain"></i>
+<br><br>
+Problem Solving
+</div>
 
-<div class="skill-card">MS Office</div>
+<div class="skill-card">
+<i class="fa-solid fa-file-word"></i>
+<br><br>
+MS Office
+</div>
 
-<div class="skill-card">Canva</div>
+<div class="skill-card">
+<i class="fa-solid fa-palette"></i>
+<br><br>
+Canva
+</div>
 
-<div class="skill-card">Artificial Intelligence</div>
+<div class="skill-card">
+<i class="fa-solid fa-robot"></i>
+<br><br>
+Artificial Intelligence
+</div>
 
-<div class="skill-card">Machine Learning</div>
+<div class="skill-card">
+<i class="fa-solid fa-microchip"></i>
+<br><br>
+Machine Learning
+</div>
 
-<div class="skill-card">Communication Skills</div>
+<div class="skill-card">
+<i class="fa-solid fa-comments"></i>
+<br><br>
+Communication Skills
+</div>
 
-<div class="skill-card">Technology Explorer</div>
+<div class="skill-card">
+<i class="fa-solid fa-lightbulb"></i>
+<br><br>
+Technology Explorer
+</div>
 
 </div>
 
@@ -809,6 +789,23 @@ Neyveli
 </section>
 
 <style>
+
+/* SECTION */
+
+section{
+padding:100px 8%;
+}
+
+.container{
+max-width:1300px;
+margin:auto;
+}
+
+h2{
+font-size:2.4rem;
+margin-bottom:30px;
+color:#7dd3fc;
+}
 
 /* ABOUT */
 
@@ -847,7 +844,13 @@ transform:translateY(-8px);
 
 }
 
-/* QUICK INFO */
+.glass-card p{
+
+line-height:1.9;
+
+color:#dbeafe;
+
+}
 
 .quick-info h3{
 
@@ -855,7 +858,7 @@ color:#7dd3fc;
 
 }
 
-/* TIMELINE */
+/* EDUCATION */
 
 .timeline{
 
@@ -867,9 +870,9 @@ padding-left:25px;
 
 .timeline-item{
 
-margin-bottom:30px;
-
 position:relative;
+
+margin-bottom:30px;
 
 }
 
@@ -912,15 +915,25 @@ backdrop-filter:blur(18px);
 
 border:1px solid rgba(255,255,255,.15);
 
-padding:20px;
+padding:25px;
 
 text-align:center;
 
-border-radius:18px;
+border-radius:20px;
 
 font-weight:600;
 
+font-size:1rem;
+
 transition:.4s;
+
+}
+
+.skill-card i{
+
+font-size:30px;
+
+color:#7dd3fc;
 
 }
 
@@ -931,6 +944,12 @@ background:#38bdf8;
 color:#001018;
 
 transform:translateY(-8px);
+
+}
+
+.skill-card:hover i{
+
+color:#001018;
 
 }
 
@@ -948,45 +967,6 @@ grid-template-columns:1fr;
 
 </style>
 
-<script>
-
-/* Reveal Animation */
-
-const revealElements =
-document.querySelectorAll(
-'.glass-card,.skill-card'
-);
-
-window.addEventListener('scroll',()=>{
-
-revealElements.forEach(el=>{
-
-const top =
-el.getBoundingClientRect().top;
-
-if(top < window.innerHeight - 100){
-
-el.style.opacity='1';
-el.style.transform='translateY(0)';
-
-}
-
-});
-
-});
-
-revealElements.forEach(el=>{
-
-el.style.opacity='0';
-
-el.style.transform='translateY(30px)';
-
-el.style.transition='all .8s ease';
-
-});
-
-</script>
-
 <!-- PROJECTS SECTION -->
 
 <section id="projects">
@@ -997,8 +977,6 @@ el.style.transition='all .8s ease';
 
 <div class="projects-grid">
 
-<!-- Project 1 -->
-
 <div class="project-card">
 
 <div class="project-icon">
@@ -1008,25 +986,19 @@ el.style.transition='all .8s ease';
 <h3>Kattupuli Personal Website</h3>
 
 <p>
-
 Designed and deployed a personal website using GitHub Pages
-to showcase personal information, interests, and web
-development skills.
-
+to showcase personal information, interests, and web development skills.
 </p>
 
 <a href="https://vichu2008.github.io/kattupuli/"
 target="_blank">
 
 Visit Website
-
 <i class="fa-solid fa-arrow-up-right-from-square"></i>
 
 </a>
 
 </div>
-
-<!-- Project 2 -->
 
 <div class="project-card">
 
@@ -1037,18 +1009,15 @@ Visit Website
 <h3>Professional Portfolio Website</h3>
 
 <p>
-
-Developed a modern portfolio website to showcase
-education, skills, certifications, achievements,
-and career goals.
-
+Developed a modern personal portfolio website to showcase
+education, skills, certifications, achievements, and career goals.
 </p>
 
-<a href="#">
+<a href="https://vichu2008.github.io/portfolio2/"
+target="_blank">
 
-Portfolio Project
-
-<i class="fa-solid fa-arrow-right"></i>
+View Portfolio
+<i class="fa-solid fa-arrow-up-right-from-square"></i>
 
 </a>
 
@@ -1082,10 +1051,9 @@ Portfolio Project
 
 <p>
 
-Successfully completed Python Programming training
-and certification, gaining knowledge in programming
-fundamentals, logic building, functions, loops,
-and problem-solving techniques.
+Successfully completed Python Programming Certification
+and gained knowledge in programming fundamentals,
+loops, functions, logic building, and problem-solving techniques.
 
 </p>
 
@@ -1115,9 +1083,9 @@ and problem-solving techniques.
 
 <p>
 
-Pursue a Bachelor's degree in Computer Science
-Engineering and strengthen my software development,
-programming, and problem-solving skills.
+Pursue a Bachelor's Degree in Computer Science Engineering
+and strengthen programming, software development,
+and problem-solving skills.
 
 </p>
 
@@ -1131,10 +1099,9 @@ programming, and problem-solving skills.
 
 <p>
 
-Build a successful career in technology while
-continuously learning new innovations and exploring
-opportunities in digital investigation, cybersecurity,
-and advanced computing domains.
+Build a successful career in the technology industry,
+specialize in emerging technologies,
+and contribute to innovative software solutions.
 
 </p>
 
@@ -1153,10 +1120,7 @@ and advanced computing domains.
 .projects-grid{
 
 display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(320px,1fr));
-
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 gap:30px;
 
 }
@@ -1164,13 +1128,10 @@ gap:30px;
 .project-card{
 
 background:rgba(255,255,255,.08);
-
 backdrop-filter:blur(18px);
-
 border:1px solid rgba(255,255,255,.15);
 
 padding:30px;
-
 border-radius:25px;
 
 transition:.4s;
@@ -1189,9 +1150,7 @@ box-shadow:
 .project-icon{
 
 font-size:40px;
-
 color:#7dd3fc;
-
 margin-bottom:20px;
 
 }
@@ -1199,7 +1158,6 @@ margin-bottom:20px;
 .project-card h3{
 
 margin-bottom:15px;
-
 color:#ffffff;
 
 }
@@ -1213,9 +1171,7 @@ margin-bottom:20px;
 .project-card a{
 
 text-decoration:none;
-
 color:#7dd3fc;
-
 font-weight:600;
 
 }
@@ -1225,19 +1181,15 @@ font-weight:600;
 .certificate-card{
 
 display:flex;
-
 gap:25px;
-
 align-items:flex-start;
 
 background:rgba(255,255,255,.08);
-
 backdrop-filter:blur(18px);
 
 border:1px solid rgba(255,255,255,.15);
 
 padding:30px;
-
 border-radius:25px;
 
 }
@@ -1245,7 +1197,6 @@ border-radius:25px;
 .certificate-icon{
 
 font-size:45px;
-
 color:#7dd3fc;
 
 }
@@ -1255,10 +1206,7 @@ color:#7dd3fc;
 .goal-grid{
 
 display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(320px,1fr));
-
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 gap:30px;
 
 }
@@ -1266,13 +1214,11 @@ gap:30px;
 .goal-card{
 
 background:rgba(255,255,255,.08);
-
 backdrop-filter:blur(18px);
 
 border:1px solid rgba(255,255,255,.15);
 
 padding:30px;
-
 border-radius:25px;
 
 transition:.4s;
@@ -1288,7 +1234,6 @@ transform:translateY(-10px);
 .goal-card h3{
 
 margin-bottom:15px;
-
 color:#7dd3fc;
 
 }
@@ -1315,96 +1260,72 @@ flex-direction:column;
 
 <div class="contact-wrapper">
 
+<!-- LEFT SIDE -->
+
 <div class="contact-info">
 
 <div class="contact-card">
-
 <i class="fa-solid fa-envelope"></i>
-
 <div>
-
 <h3>Email</h3>
-
-<p>
-vishnupriyan183@gmail.com
-</p>
-
+<p>vishnupriyan183@gmail.com</p>
 </div>
-
 </div>
 
 <div class="contact-card">
-
 <i class="fa-brands fa-github"></i>
-
 <div>
-
 <h3>GitHub</h3>
-
-<p>
-github.com/vichu2008
-</p>
-
+<p>github.com/vichu2008</p>
 </div>
-
 </div>
 
 <div class="contact-card">
-
 <i class="fa-brands fa-linkedin"></i>
-
 <div>
-
 <h3>LinkedIn</h3>
-
-<p>
-Connect Professionally
-</p>
-
+<p>Connect Professionally</p>
 </div>
-
 </div>
 
 <div class="contact-card">
-
 <i class="fa-solid fa-briefcase"></i>
-
 <div>
-
 <h3>Naukri Profile</h3>
-
-<p>
-Available for Opportunities
-</p>
-
+<p>Available for Opportunities</p>
+</div>
 </div>
 
 </div>
 
-</div>
+<!-- RIGHT SIDE -->
 
 <div class="contact-form-card">
 
-<form onsubmit="sendMessage(event)">
+<form id="contact-form" onsubmit="sendMessage(event)">
 
 <input
 type="text"
+id="name"
 placeholder="Your Name"
 required>
 
 <input
 type="email"
+id="email"
 placeholder="Your Email"
 required>
 
 <textarea
+id="message"
 placeholder="Your Message"
 required></textarea>
 
-<button type="submit" class="btn">
+<button
+type="submit"
+class="btn">
 
 <i class="fa-solid fa-paper-plane"></i>
-
 Send Message
 
 </button>
@@ -1419,82 +1340,14 @@ Send Message
 
 </section>
 
-<!-- BACK TO TOP -->
-
-<button id="topBtn">
-
-<i class="fa-solid fa-arrow-up"></i>
-
-</button>
-
-<!-- FOOTER -->
-
-<footer>
-
-<div class="footer-content">
-
-<h3>VISHNUPRIYAN M</h3>
-
-<p>
-
-Aspiring Computer Science Engineer |
-Automobile Enthusiast |
-Python Programmer
-
-</p>
-
-<div class="footer-socials">
-
-<a href="https://github.com/vichu2008"
-target="_blank">
-
-<i class="fab fa-github"></i>
-
-</a>
-
-<a href="https://www.linkedin.com/in/vishnupriyan-m-848bb1415"
-target="_blank">
-
-<i class="fab fa-linkedin"></i>
-
-</a>
-
-<a href="https://www.naukri.com/mnjuser/profile"
-target="_blank">
-
-<i class="fa-solid fa-briefcase"></i>
-
-</a>
-
-<a href="mailto:vishnupriyan183@gmail.com">
-
-<i class="fa-solid fa-envelope"></i>
-
-</a>
-
-</div>
-
-<p class="copyright">
-
-© 2026 Vishnupriyan M.
-All Rights Reserved.
-
-</p>
-
-</div>
-
-</footer>
-
 <style>
 
-/* CONTACT */
+/* CONTACT SECTION */
 
 .contact-wrapper{
 
 display:grid;
-
 grid-template-columns:1fr 1fr;
-
 gap:30px;
 
 }
@@ -1502,9 +1355,7 @@ gap:30px;
 .contact-info{
 
 display:flex;
-
 flex-direction:column;
-
 gap:20px;
 
 }
@@ -1512,9 +1363,7 @@ gap:20px;
 .contact-card{
 
 display:flex;
-
 align-items:center;
-
 gap:20px;
 
 padding:25px;
@@ -1527,12 +1376,19 @@ backdrop-filter:blur(18px);
 
 border:1px solid rgba(255,255,255,.15);
 
+transition:.4s;
+
+}
+
+.contact-card:hover{
+
+transform:translateY(-8px);
+
 }
 
 .contact-card i{
 
 font-size:28px;
-
 color:#7dd3fc;
 
 }
@@ -1554,9 +1410,7 @@ border:1px solid rgba(255,255,255,.15);
 .contact-form-card form{
 
 display:flex;
-
 flex-direction:column;
-
 gap:15px;
 
 }
@@ -1567,7 +1421,6 @@ gap:15px;
 padding:15px;
 
 border:none;
-
 outline:none;
 
 border-radius:15px;
@@ -1581,129 +1434,16 @@ color:white;
 .contact-form-card textarea{
 
 height:160px;
-
 resize:none;
 
 }
 
-/* FOOTER */
+.contact-form-card input::placeholder,
+.contact-form-card textarea::placeholder{
 
-footer{
-
-padding:60px 20px;
-
-text-align:center;
-
-margin-top:50px;
-
-background:rgba(0,0,0,.30);
-
-backdrop-filter:blur(20px);
-
-border-top:1px solid rgba(255,255,255,.08);
+color:#cbd5e1;
 
 }
-
-.footer-content h3{
-
-color:#7dd3fc;
-
-margin-bottom:15px;
-
-}
-
-.footer-socials{
-
-display:flex;
-
-justify-content:center;
-
-gap:15px;
-
-margin:20px 0;
-
-}
-
-.footer-socials a{
-
-width:45px;
-
-height:45px;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-border-radius:50%;
-
-background:rgba(255,255,255,.08);
-
-color:white;
-
-text-decoration:none;
-
-transition:.4s;
-
-}
-
-.footer-socials a:hover{
-
-background:#38bdf8;
-
-color:#001018;
-
-}
-
-.copyright{
-
-margin-top:20px;
-
-font-size:.9rem;
-
-opacity:.8;
-
-}
-
-/* TOP BUTTON */
-
-#topBtn{
-
-position:fixed;
-
-right:25px;
-
-bottom:25px;
-
-width:55px;
-
-height:55px;
-
-border:none;
-
-border-radius:50%;
-
-cursor:pointer;
-
-display:none;
-
-background:#38bdf8;
-
-color:#001018;
-
-font-size:18px;
-
-font-weight:bold;
-
-box-shadow:
-0 10px 25px rgba(56,189,248,.35);
-
-z-index:999;
-
-}
-
-/* MOBILE */
 
 @media(max-width:900px){
 
@@ -1717,34 +1457,124 @@ grid-template-columns:1fr;
 
 </style>
 
+<!-- EMAILJS -->
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
 <script>
 
-/* Contact Form */
+emailjs.init("CSldrwL1VWPWmn1bU");
 
 function sendMessage(e){
 
 e.preventDefault();
 
-alert(
-"Thank you for contacting me! I will get back to you soon."
-);
+emailjs.send(
+
+"service_lj6d6u5",
+
+"template_h7xlkbo",
+
+{
+name: document.getElementById("name").value,
+email: document.getElementById("email").value,
+message: document.getElementById("message").value
+}
+
+)
+
+.then(function(){
+
+alert("Message sent successfully!");
+
+document.getElementById("contact-form").reset();
+
+})
+
+.catch(function(error){
+
+alert("Failed to send message!");
+
+console.log(error);
+
+});
 
 }
 
-/* Back To Top */
+</script>
 
-const topBtn =
-document.getElementById("topBtn");
+<script>
+
+/* TYPING ANIMATION */
+
+const texts = [
+"Aspiring Computer Science Engineer",
+"Automobile Enthusiast",
+"Python Programmer",
+"Technology Explorer"
+];
+
+let count = 0;
+let index = 0;
+
+(function type(){
+
+if(count === texts.length){
+count = 0;
+}
+
+let currentText = texts[count];
+let letter = currentText.slice(0, ++index);
+
+document.getElementById("typing").textContent = letter;
+
+if(letter.length === currentText.length){
+
+count++;
+index = 0;
+
+setTimeout(type, 1500);
+
+}else{
+
+setTimeout(type, 90);
+
+}
+
+})();
+
+/* PROGRESS BAR */
+
+window.addEventListener("scroll",()=>{
+
+const winScroll =
+document.documentElement.scrollTop;
+
+const height =
+document.documentElement.scrollHeight -
+document.documentElement.clientHeight;
+
+const scrolled =
+(winScroll / height) * 100;
+
+document.getElementById("progressBar")
+.style.width = scrolled + "%";
+
+});
+
+/* BACK TO TOP */
+
+const topBtn = document.getElementById("topBtn");
 
 window.addEventListener("scroll",()=>{
 
 if(window.scrollY > 400){
 
-topBtn.style.display="block";
+topBtn.style.display = "block";
 
 }else{
 
-topBtn.style.display="none";
+topBtn.style.display = "none";
 
 }
 
@@ -1761,25 +1591,22 @@ behavior:"smooth"
 
 });
 
-/* Fade Animation */
+/* REVEAL ANIMATION */
 
-const revealItems =
-document.querySelectorAll(
-'.project-card,.goal-card,.certificate-card,.contact-card,.contact-form-card'
+const revealItems = document.querySelectorAll(
+'.project-card,.goal-card,.certificate-card,.contact-card,.contact-form-card,.skill-card,.glass-card'
 );
 
 function reveal(){
 
 revealItems.forEach(item=>{
 
-const top =
-item.getBoundingClientRect().top;
+const top = item.getBoundingClientRect().top;
 
 if(top < window.innerHeight - 100){
 
-item.style.opacity="1";
-
-item.style.transform="translateY(0)";
+item.style.opacity = "1";
+item.style.transform = "translateY(0)";
 
 }
 
@@ -1789,11 +1616,9 @@ item.style.transform="translateY(0)";
 
 revealItems.forEach(item=>{
 
-item.style.opacity="0";
-
-item.style.transform="translateY(30px)";
-
-item.style.transition=".8s ease";
+item.style.opacity = "0";
+item.style.transform = "translateY(30px)";
+item.style.transition = ".8s ease";
 
 });
 
